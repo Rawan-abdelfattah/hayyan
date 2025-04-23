@@ -3,8 +3,7 @@ import React from "react";
 const ParallaxBG = ({ image, text }) => {
   return (
     <div
-      className="relative bg-center bg-cover md:h-screen flex items-center justify-center
-                 md:bg-fixed bg-scroll"
+      className="relative bg-center bg-cover md:h-screen flex items-center justify-center md:bg-fixed bg-scroll"
       style={{ backgroundImage: `url(${image})` }}
     >
       {text && (
