@@ -27,7 +27,7 @@ const KeyFeatures = () => {
                 </li>
               ))}
             </ul>
-            <button className="flex items-center gap-2 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] px-4 py-2 rounded-full shadow-lg transition-all duration-200 mt-10">
+            <button className="flex items-center gap-2 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] px-2 py-2 rounded-full shadow-lg transition-all duration-200 mt-10">
               <FaDownload />
               DOWNLOAD BROCHURE
             </button>

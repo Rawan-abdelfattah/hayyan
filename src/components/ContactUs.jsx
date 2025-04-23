@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';  
+import 'react-phone-input-2/lib/style.css';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -10,8 +10,10 @@ const ContactUs = () => {
     email: '',
     phone: '',
     message: '',
+    budget: '', // الميزانية المتوقعة
   });
-  const [defaultCountry, setDefaultCountry] = useState("us")
+
+  const [defaultCountry, setDefaultCountry] = useState("us");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,14 +45,13 @@ const ContactUs = () => {
       .then(response => response.json())
       .then(data => {
         if (data.country) {
-          setDefaultCountry(data.country.toLowerCase())
+          setDefaultCountry(data.country.toLowerCase());
         } else {
-          console.error("Invalid response:", data)
+          console.error("Invalid response:", data);
         }
       })
-      .catch(error => console.error("Error fetching geolocation:", error))
-  }, [])
-
+      .catch(error => console.error("Error fetching geolocation:", error));
+  }, []);
 
   return (
     <section className="bg-gray-100 py-16 px-4 md:px-10">
@@ -86,33 +87,38 @@ const ContactUs = () => {
             </div>
             <div>
               <label className="block text-gray-700 font-medium mb-1">Phone</label>
-         
-                  <PhoneInput
-                      country={defaultCountry}
-                      value={formData.phone}
-                      onChange={handlePhoneChange}
-                      containerStyle={{
-                        width: "100%",
-                      }}
-                      inputStyle={{
-                        width: "100%",
-                        height: "50px",
-                        borderRadius: "8px",
-                        border: "1px solid #E5E5E5",
-                        paddingLeft: "55px",
-                        fontSize: "16px",
-                      }}
-                      buttonStyle={{
-                        backgroundColor: "transparent",
-                        borderTopLeftRadius: "8px",
-                        borderBottomLeftRadius: "8px",
-                        border: "none",
-                        padding: "0 12px",
-                      }}
-                      dropdownStyle={{
-                        borderRadius: "8px",
-                      }}
-                    />
+              <PhoneInput
+                country={defaultCountry}
+                value={formData.phone}
+                onChange={handlePhoneChange}
+                containerStyle={{ width: "100%" }}
+                inputStyle={{
+                  width: "100%",
+                  height: "50px",
+                  borderRadius: "8px",
+                  border: "1px solid #E5E5E5",
+                  paddingLeft: "55px",
+                  fontSize: "16px",
+                }}
+                buttonStyle={{
+                  backgroundColor: "transparent",
+                  borderTopLeftRadius: "8px",
+                  borderBottomLeftRadius: "8px",
+                  border: "none",
+                  padding: "0 12px",
+                }}
+                dropdownStyle={{ borderRadius: "8px" }}
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-medium mb-1">Expected Budget</label>
+              <input
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
+                placeholder="مثال: 500,000 درهم"
+                className="w-full border border-gray-300 focus:border-[#16A2B8] focus:ring-[#16A2B8] rounded px-4 py-2 bg-gray-50 outline-none transition"
+              />
             </div>
             <div>
               <label className="block text-gray-700 font-medium mb-1">Message</label>
