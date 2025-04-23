@@ -8,7 +8,7 @@ const ParallaxBG = ({ image, text }) => {
       style={{ backgroundImage: `url(${image})` }}
     >
       {text && (
-        <div className="group text-white text-3xl font-bold text-center">
+        <div className="group text-white text-xl md:text-3xl font-bold text-center">
           {text}
           <div className="mt-4 mx-auto h-1 bg-white rounded w-1/7 transition-all duration-500 group-hover:w-1/5"></div>
         </div>
