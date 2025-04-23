@@ -3,10 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const exteriorImages = [
-  "https://images.pexels.com/photos/16574945/pexels-photo-16574945/free-photo-of-ships-in-suez.jpeg",
-  "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
-];
+const exteriorImages = ["/exterior1.jpg", "/exterior2.jpg"];
 
 const interiorImages = [
   "/internal1.jpg",
@@ -19,7 +16,6 @@ const HorizontalScrollGallery = () => {
   return (
     <section className="bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-24">
-
         {/* Exterior Section */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <Swiper
@@ -27,12 +23,12 @@ const HorizontalScrollGallery = () => {
             autoplay={{ delay: 2000, disableOnInteraction: false }}
             spaceBetween={10}
             slidesPerView={1}
-            className="w-full max-w-md h-[300px] rounded-2xl shadow-lg"
+            className="w-full max-w-md h-[300px] shadow-lg"
           >
             {exteriorImages.map((src, index) => (
               <SwiperSlide key={index}>
                 <img
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover"
                   src={src}
                   alt={`Exterior view ${index + 1}`}
                 />
@@ -42,12 +38,12 @@ const HorizontalScrollGallery = () => {
 
           <div className="text-center lg:text-left">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Exterior</h2>
-            <div className="h-1 bg-[#16A2B8] mt-5 mb-10 rounded w-1/7"></div>
+            <div className="h-1 bg-[#16A2B8] lg:mt-5 lg:mb-10 w-1/7 mx-auto lg:mx-0 rounded" />
             <p className="text-lg text-gray-600 mb-6">
               The exteriors provide residents with a modern lifestyle and
               exceptional quality of living which is connected to nature.
             </p>
-            <button className="flex gap-2 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button className="md:mx-auto lg:mx-0 flex gap-2 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>
@@ -58,12 +54,12 @@ const HorizontalScrollGallery = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
           <div className="text-center lg:text-left">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Interior</h2>
-            <div className="h-1 bg-[#16A2B8] mt-5 mb-10 rounded w-1/7"></div>
+            <div className="h-1 bg-[#16A2B8] lg:mt-5 lg:mb-10 w-1/7 mx-auto lg:mx-0 rounded" />
             <p className="text-lg text-gray-600 mb-6">
               The interiors feature a refined and comfortable atmosphere using
               premium materials and natural lighting.
             </p>
-            <button className="flex gap-2 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button className="md:mx-auto lg:mx-0 flex gap-2 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>
@@ -74,12 +70,12 @@ const HorizontalScrollGallery = () => {
             autoplay={{ delay: 1500, disableOnInteraction: false }}
             spaceBetween={10}
             slidesPerView={1}
-            className="w-full max-w-md h-[300px] rounded-2xl shadow-lg"
+            className="w-full max-w-md h-[300px] shadow-lg"
           >
             {interiorImages.map((src, index) => (
               <SwiperSlide key={index}>
                 <img
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover"
                   src={src}
                   alt={`Interior view ${index + 1}`}
                 />
@@ -90,8 +86,12 @@ const HorizontalScrollGallery = () => {
 
         {/* Payment Plan Section */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Payment Plan</h2>
-          <p className="text-lg text-gray-600 mb-10">100% in 6 years. T&Cs Apply</p>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            Payment Plan
+          </h2>
+          <p className="text-lg text-gray-600 mb-10">
+            100% in 6 years. T&Cs Apply
+          </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-12">
             <div>
               <h3 className="text-2xl font-bold text-gray-900">40%</h3>
