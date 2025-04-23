@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaDownload, FaWhatsapp } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 
 const imageUrls = ["/hero2.jpg", "/hero1.jpg"];
 
@@ -30,13 +30,14 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-black opacity-60" />
 
-      <div className="absolute top-10 left-20 z-20">
-        <img
-          src="/logo.png"
-          alt="Logo"
-          className="w-32 sm:w-40 object-contain"
-        />
-      </div>
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 lg:left-20 lg:translate-x-0">
+  <img
+    src="/logo.png"
+    alt="Logo"
+    className="w-32 sm:w-40 object-contain"
+  />
+</div>
+
 
       <div className="m-auto relative z-10 flex items-center justify-center h-full px-4 text-center">
         <div className="max-w-2xl w-full">
@@ -70,21 +71,6 @@ const Hero = () => {
             DOWNLOAD BROCHURE
           </button>
         </div>
-      </div>
-
-      <div className="fixed bottom-5 right-5 z-20">
-        <a
-          href="https://wa.me/your-number"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative flex items-center bg-green-500 animate-bounceY text-black p-2 rounded-full shadow-lg hover:bg-gray-100 transition"
-        >
-          {/* Notification Badge */}
-          <span className="absolute text-[8px] top-[-1px] -right-1 bg-red-600 text-white text-xs w-3 h-3 flex items-center justify-center rounded-full shadow">
-            1
-          </span>
-          <FaWhatsapp className="w-8 h-8 text-white" />
-        </a>
       </div>
     </div>
   );
