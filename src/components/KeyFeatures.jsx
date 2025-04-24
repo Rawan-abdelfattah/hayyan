@@ -27,7 +27,7 @@ const KeyFeatures = () => {
                 </li>
               ))}
             </ul>
-            <button className="flex items-center gap-1 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] md:px-5 py-2 px-2 rounded-full shadow-lg transition-all duration-200 mt-10">
+            <button className="flex items-center gap-1 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] md:px-5 py-2 px-4 md:text-[16px] text-[14px]  rounded-full shadow-lg transition-all duration-200 mt-10">
               <FaDownload />
               DOWNLOAD BROCHURE
             </button>
@@ -37,7 +37,7 @@ const KeyFeatures = () => {
             <img
               src="/feature.jpeg"
               alt="Woman by pond"
-              className="  object-cover  h-full"
+              className="  object-cover h-[400px] md:h-full"
             />
           </div>
         </div>
