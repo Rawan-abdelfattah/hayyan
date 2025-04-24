@@ -3,32 +3,32 @@ import React from "react";
 const galleryData = [
   {
     id: 1,
-    src: "/ajwan/gallery1.jpg",
+    src: "/ofplan/ajwan/gallery1.jpg",
     alt: "Modern villa front view",
   },
   {
     id: 2,
-    src: "/ajwan/gallery2.webp",
+    src: "/ofplan/ajwan/gallery2.webp",
     alt: "Backyard and pool area",
   },
   {
     id: 3,
-    src: "/ajwan/gallery3.webp",
+    src: "/ofplan/ajwan/gallery3.webp",
     alt: "Row of modern townhouses",
   },
   {
     id: 4,
-    src: "/ajwan/gallery4.jpg",
+    src: "/ofplan/ajwan/gallery4.jpg",
     alt: "Aerial view of residential community",
   },
   {
     id: 5,
-    src: "/ajwan/gallery5.jpg",
+    src: "/ofplan/ajwan/gallery5.jpg",
     alt: "Aerial view of residential community",
   },
   {
     id: 6,
-    src: "/ajwan/gallery6.jpg",
+    src: "/ofplan/ajwan/gallery6.jpg",
     alt: "Aerial view of residential community",
   },
 ];

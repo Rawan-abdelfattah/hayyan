@@ -9,19 +9,19 @@ const RelatedProjects = () => {
       title: "Yasmeen Villas",
       description:
         "Al Yasmeen is a residential complex located in Al Zahia, Sharjah. Properties are ideal for people who are looking to live in a luxury building with comfortable accommodations.",
-      image: "/ajwan/project1.jpeg",
+      image: "/ofplan/ajwan/project1.jpeg",
     },
     {
       title: "Sustainable City Sharjah",
       description:
         "Sharjah Sustainable City is the first sustainable master-planned community in the Emirate of Sharjah.",
-      image: "/ajwan/project2.jpg",
+      image: "/ofplan/ajwan/project2.jpg",
     },
     {
       title: "Masaar Villas",
       description:
         "Masaar by Arada, offers a selection of 2 to 4-bedroom townhouses and 4 & 5-bedroom park villas in Sharjah, UAE",
-      image: "/ajwan/project3.webp",
+      image: "/ofplan/ajwan/project3.webp",
     },
   ];
 
