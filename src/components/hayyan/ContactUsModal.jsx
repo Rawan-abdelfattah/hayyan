@@ -74,10 +74,8 @@ const ContactUsModal = ({ isOpen, onClose }) => {
             {
               required: true,
               validator: (_, value) => {
-                if (
-                  !value ||
-                  value.replace(/\D/g, "").length <= defaultCountry?.length
-                ) {
+                const digitsOnly = value?.replace(/\D/g, "") || "";
+                if (!value || digitsOnly.length < 8) {
                   return Promise.reject(
                     new Error("Please enter a valid phone number")
                   );
@@ -87,7 +85,6 @@ const ContactUsModal = ({ isOpen, onClose }) => {
             },
           ]}
         >
-          {" "}
           <PhoneInput
             country={defaultCountry}
             containerStyle={{ width: "100%" }}

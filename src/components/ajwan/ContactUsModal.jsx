@@ -11,7 +11,7 @@ const ContactUsModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = (values) => {
     fetch(
-      "https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f",
+      "https://api.sheetbest.com/sheets/424b0673-f5a8-440a-a009-6b7421cda7a3",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -74,10 +74,8 @@ const ContactUsModal = ({ isOpen, onClose }) => {
             {
               required: true,
               validator: (_, value) => {
-                if (
-                  !value ||
-                  value.replace(/\D/g, "").length <= defaultCountry?.length
-                ) {
+                const digitsOnly = value?.replace(/\D/g, "") || "";
+                if (!value || digitsOnly.length < 8) {
                   return Promise.reject(
                     new Error("Please enter a valid phone number")
                   );
@@ -87,7 +85,6 @@ const ContactUsModal = ({ isOpen, onClose }) => {
             },
           ]}
         >
-          {" "}
           <PhoneInput
             country={defaultCountry}
             containerStyle={{ width: "100%" }}
