@@ -1,6 +1,6 @@
 import React from "react";
 
-const HayyanThankYou = () => {
+const ThankYou = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
@@ -29,4 +29,4 @@ const HayyanThankYou = () => {
   );
 };
 
-export default HayyanThankYou;
+export default ThankYou;

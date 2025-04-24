@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Hayyan } from "./pages/Hayyan";
-import HayyanThankYou from "./pages/HayyanThankYou";
+import ThankYou from "./pages/ThankYou";
 import { HayyanData } from "./pages/HayyanData";
 import { NotFound } from "./pages/NotFound";
 
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Hayyan />} />
-        <Route path="/thank-you-hayyan" element={<HayyanThankYou />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/data-hayyan" element={<HayyanData />} />
         <Route path="*" element={<NotFound />} /> {/* 404 route */}
 

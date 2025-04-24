@@ -44,7 +44,7 @@ const ContactUs = () => {
         return response.json();
       })
       .then(() => {
-        navigate("/thank-you-hayyan");
+        navigate("/thank-you");
       })
       .catch((error) => console.error("Error saving data:", error));
   };

@@ -19,7 +19,7 @@ const ContactUsModal = ({ isOpen, onClose }) => {
       }
     )
       .then((res) => res.json())
-      .then(() => navigate("/thank-you-hayyan"))
+      .then(() => navigate("/thank-you"))
       .catch((err) => console.error("Error saving data:", err));
   };
 
