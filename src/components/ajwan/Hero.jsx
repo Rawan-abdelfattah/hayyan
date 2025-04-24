@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaDownload } from "react-icons/fa";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import ContactUsModal from "./ContactUsModal";
 
 const imageUrls = ["/ajwan/hero.png", "/ajwan/hero.mp4"];
@@ -76,13 +76,11 @@ const Hero = () => {
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-1 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] px-6 py-2 rounded-full shadow-lg transition-all duration-200 mx-auto"
-            aria-label="Download Brochure"
+            className="cursor-pointer flex gap-1 m-auto items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105"
           >
-            <FaDownload />
-            Request available units and prices{" "}
+            <FaRegArrowAltCircleRight />
+            REQUEST AVAILABLE UNITS AND PRICES
           </button>
-
           <ContactUsModal
             isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}

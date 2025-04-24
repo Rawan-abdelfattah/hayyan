@@ -67,13 +67,33 @@ const ContactUsModal = ({ isOpen, onClose }) => {
           <Input placeholder="Enter your email" />
         </Form.Item>
 
-        <Form.Item label="Phone" name="phone" rules={[{ required: true }]}>
+        <Form.Item
+          label="Phone"
+          name="phone"
+          rules={[
+            {
+              required: true,
+              validator: (_, value) => {
+                if (
+                  !value ||
+                  value.replace(/\D/g, "").length <= defaultCountry?.length
+                ) {
+                  return Promise.reject(
+                    new Error("Please enter a valid phone number")
+                  );
+                }
+                return Promise.resolve();
+              },
+            },
+          ]}
+        >
+          {" "}
           <PhoneInput
             country={defaultCountry}
             containerStyle={{ width: "100%" }}
             inputStyle={{
               width: "100%",
-              height: "35px",
+              height: "40px",
               borderRadius: "8px",
               border: "1px solid #E5E5E5",
               paddingLeft: "55px",
