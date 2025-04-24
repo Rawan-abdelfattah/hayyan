@@ -91,9 +91,23 @@ const ContactUsModal = ({ isOpen, onClose }) => {
           />
         </Form.Item>
 
-        <Form.Item label="Expected Budget" name="budget">
-          <Input placeholder="Example: 500,000 AED" />
-        </Form.Item>
+ <Form.Item
+              label="Expected Budget"
+              name="budget"
+              rules={[{ required: true, message: "Please enter your budget" }]}
+            >
+              <Input
+                name="budget" 
+                placeholder="Example: 500000"
+                className="!h-[40px] !bg-gray-50 !rounded !border !border-gray-300 focus:!border-[#16A2B8] focus:!ring-[#16A2B8]"
+                type="number"
+                step="any"
+                min="0"
+                rules={[
+                  { required: true, message: "Please enter your budget" },
+                ]}
+              />
+            </Form.Item>
 
         <Form.Item label="Message" name="message">
           <Input.TextArea rows={3} placeholder="Enter your message" />

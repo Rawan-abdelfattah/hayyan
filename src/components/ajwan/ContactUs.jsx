@@ -32,13 +32,16 @@ const ContactUs = () => {
   };
 
   const handleSubmit = () => {
-    fetch("https://api.sheetbest.com/sheets/424b0673-f5a8-440a-a009-6b7421cda7a3", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      "https://api.sheetbest.com/sheets/424b0673-f5a8-440a-a009-6b7421cda7a3",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    )
       .then((response) => {
         if (!response.ok) throw new Error("Failed to save data");
         return response.json();
@@ -48,8 +51,6 @@ const ContactUs = () => {
       })
       .catch((error) => console.error("Error saving data:", error));
   };
-  
-  
 
   useEffect(() => {
     fetch("https://ipinfo.io/json?token=1ed173baff89f5")
@@ -131,13 +132,23 @@ const ContactUs = () => {
               />
             </Form.Item>
 
-            <Form.Item label="Expected Budget" name="budget">
+            <Form.Item
+              label="Expected Budget"
+              name="budget"
+              rules={[{ required: true, message: "Please enter your budget" }]}
+            >
               <Input
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                placeholder="Example: 500,000 AED"
+                placeholder="Example: 500000"
                 className="!h-[40px] !bg-gray-50 !rounded !border !border-gray-300 focus:!border-[#16A2B8] focus:!ring-[#16A2B8]"
+                type="number"
+                step="any"
+                min="0"
+                rules={[
+                  { required: true, message: "Please enter your budget" },
+                ]}
               />
             </Form.Item>
 

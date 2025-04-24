@@ -107,20 +107,27 @@ const ContactUs = () => {
             </Form.Item>
 
             <Form.Item
-  label="Phone"
-  name="phone"
-  rules={[
-    {
-      required: true,
-      validator: (_, value) => {
-        if (!value || value.replace(/\D/g, '').length <= defaultCountry?.length) {
-          return Promise.reject(new Error("Please enter a valid phone number"));
-        }
-        return Promise.resolve();
-      },
-    },
-  ]}
->              <PhoneInput
+              label="Phone"
+              name="phone"
+              rules={[
+                {
+                  required: true,
+                  validator: (_, value) => {
+                    if (
+                      !value ||
+                      value.replace(/\D/g, "").length <= defaultCountry?.length
+                    ) {
+                      return Promise.reject(
+                        new Error("Please enter a valid phone number")
+                      );
+                    }
+                    return Promise.resolve();
+                  },
+                },
+              ]}
+            >
+              {" "}
+              <PhoneInput
                 country={defaultCountry}
                 value={formData.phone}
                 onChange={handlePhoneChange}
