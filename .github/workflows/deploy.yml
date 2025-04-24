@@ -27,13 +27,13 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H 64.227.99.126 >> ~/.ssh/known_hosts
 
-      - name: Deploy using SCP
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy using rsync
+        uses: appleboy/rsync-action@v0.1.7
         with:
           host: 64.227.99.126
           username: root
           key: ${{ secrets.DEPLOY_KEY }}
-          source: dist/*
-          target: /var/www/html/ofplan
-          use_insecure_cipher: true
-          debug: true
+          port: 22
+          source: "dist/"
+          target: "/var/www/html/ofplan/"
+          args: "-avz --delete"
