@@ -7,7 +7,7 @@ import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ofplan">
       <Routes>
         <Route path="/" element={<Hayyan />} />
         <Route path="/thank-you" element={<ThankYou />} />
