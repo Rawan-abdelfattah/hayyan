@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import ContactUsModal from "./ContactUsModal";
 
-const imageUrls = ["/ofplan/hayyan/hero2.jpg", "/ofplan/hayyan/hero1.jpg"];
+const imageUrls = ["/ofplan/hayyan_imgs/hero2.jpg", "/ofplan/hayyan_imgs/hero1.jpg"];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,7 +34,7 @@ const Hero = () => {
 
       <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 lg:left-20 lg:translate-x-0">
         <img
-          src="/ofplan/hayyan/logo.png"
+          src="/ofplan/hayyan_imgs/logo.png"
           alt="Logo"
           className="w-32 sm:w-40 object-contain"
         />

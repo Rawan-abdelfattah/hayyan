@@ -45,7 +45,7 @@ const KeyFeatures = () => {
 
           <div className="bg-white rounded p-2 w-full">
             <img
-              src="/ofplan/hayyan/feature.jpeg"
+              src="/ofplan/hayyan_imgs/feature.jpeg"
               alt="Woman by pond"
               className="  object-cover h-[400px] md:h-full"
             />

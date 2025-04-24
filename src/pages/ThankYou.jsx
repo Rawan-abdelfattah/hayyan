@@ -6,7 +6,7 @@ const ThankYou = () => {
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/ofplan/hayyan/parallax4.jpg')" }}
+          style={{ backgroundImage: "url('/ofplan/hayyan_imgs/parallax4.jpg')" }}
         />
 
         <div className="absolute inset-0 bg-black opacity-50" />

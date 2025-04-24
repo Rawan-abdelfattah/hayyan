@@ -77,7 +77,7 @@ const ProjectDescription = () => {
             </div>
             <img
               className="w-[600px] rounded shadow mt-5"
-              src="/ofplan/ajwan/description.jpg"
+              src="/ofplan/ajwan_imgs/description.jpg"
               alt="ajwan"
             />
           </div>

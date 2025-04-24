@@ -20,16 +20,16 @@ export const Hayyan = () => {
       <Hero />
       <Whatsapp />
       <ProjectDescription />
-      <ParallaxBG image={'/ofplan/hayyan/parallax1.jpeg'} />
+      <ParallaxBG image={'/ofplan/hayyan_imgs/parallax1.jpeg'} />
       <HorizontalScrollGallery/>
       <ParallaxBG
-        image="/hayyan/parallax2.jpg"
+        image="/ofplan/hayyan_imgs/parallax2.jpg"
         text="LARGEST SWIMMABLE BLUE WATER LAGOON IN SHARJAH"
       />
       <KeyFeatures/>
-      <ParallaxBG image={'/ofplan/hayyan/parallax3.jpg'} />
+      <ParallaxBG image={'/ofplan/hayyan_imgs/parallax3.jpg'} />
       <Gallery/>
-      <ParallaxBG image={'/ofplan/hayyan/parallax4.jpg'} />
+      <ParallaxBG image={'/ofplan/hayyan_imgs/parallax4.jpg'} />
 
       <RelatedProjects/>
       <ContactUs/>
