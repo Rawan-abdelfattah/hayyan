@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import ContactUsModal from "./ContactUsModal";
 
-const imageUrls = ["/ajwan/hero.png", "/ajwan/hero.mp4"];
+const imageUrls = ["/ofplan/ofplan/ajwan/hero.png", "/ofplan/ajwan/hero.mp4"];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,7 +50,7 @@ const Hero = () => {
 
       <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 lg:left-20 lg:translate-x-0">
         <img
-          src="/ajwan/logo.png"
+          src="/ofplan/ajwan/logo.png"
           alt="Logo"
           className="w-32 sm:w-40 object-contain"
         />

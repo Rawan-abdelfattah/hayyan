@@ -21,9 +21,9 @@ export const Ajwan = () => {
       <Hero />
       <Whatsapp />
       <ProjectDescription />
-      <ParallaxBG image={"/ajwan/parallax1.webp"} />
+      <ParallaxBG image={"/ofplan/ajwan/parallax1.webp"} />
       <KeyFeatures />
-      <ParallaxBG image="/ajwan/parallax2.webp" />
+      <ParallaxBG image="/ofplan/ajwan/parallax2.webp" />
       <Gallery />
       <Map />
       <RelatedProjects />
