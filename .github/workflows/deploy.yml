@@ -19,6 +19,9 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Test SSH port 22
+        run: nc -zv 64.227.99.126 22 || echo "SSH port 22 not reachable"
+
       - name: Add SSH known hosts
         run: |
           mkdir -p ~/.ssh
