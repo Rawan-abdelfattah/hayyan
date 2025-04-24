@@ -66,7 +66,7 @@ const Hero = () => {
             <p className="mb-6">Only 10 Minutes away from Dubai</p>
           </div>
 
-          <button className="flex items-center gap-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] px-6 py-2 rounded-full shadow-lg transition-all duration-200 mx-auto">
+          <button className="flex items-center gap-1 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] px-6 py-2 rounded-full shadow-lg transition-all duration-200 mx-auto">
             <FaDownload />
             DOWNLOAD BROCHURE
           </button>

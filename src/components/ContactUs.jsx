@@ -54,7 +54,7 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 py-16 px-4 md:px-10">
+    <section className="bg-gray-100 py-16 px-4 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">

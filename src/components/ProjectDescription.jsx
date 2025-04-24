@@ -43,7 +43,7 @@ const ProjectDescription = () => {
       </div>
 
       <div className="mt-12 md:mt-16 text-center">
-        <button className="flex gap-2 m-auto items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-2 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+        <button className="flex gap-1 m-auto items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
         <FaRegArrowAltCircleRight />
         REQUEST AVAILABLE UNITS AND PRICES
         </button>

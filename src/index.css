@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Apply Roboto globally */
 :root {
   font-family: 'Roboto', sans-serif;
 }

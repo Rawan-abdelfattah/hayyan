@@ -43,7 +43,7 @@ const HorizontalScrollGallery = () => {
               The exteriors provide residents with a modern lifestyle and
               exceptional quality of living which is connected to nature.
             </p>
-            <button className="md:mx-auto lg:mx-0 flex gap-2 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-2 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button className="md:mx-auto lg:mx-0 flex gap-1 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>
@@ -59,7 +59,7 @@ const HorizontalScrollGallery = () => {
               The interiors feature a refined and comfortable atmosphere using
               premium materials and natural lighting.
             </p>
-            <button className="md:mx-auto lg:mx-0 flex gap-2 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-2 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button className="md:mx-auto lg:mx-0 flex gap-1 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>
@@ -103,7 +103,7 @@ const HorizontalScrollGallery = () => {
             </div>
           </div>
           <div className="mt-10">
-            <button className="flex gap-2 m-auto items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold px-2 py-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button className="flex gap-1 m-auto items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-2 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>
