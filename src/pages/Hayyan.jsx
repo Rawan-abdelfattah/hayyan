@@ -9,16 +9,21 @@ import { Footer } from "../components/hayyan/Footer";
 import KeyFeatures from "../components/hayyan/KeyFeatures";
 import Gallery from "../components/hayyan/Gallery";
 import { Whatsapp } from "../components/hayyan/Whatsapp";
+import { Helmet } from "react-helmet";
 export const Hayyan = () => {
   return (
     <>
+      {" "}
+      <Helmet>
+        <title>Hayyan-sharjah – uae sales office</title>
+      </Helmet>
       <Hero />
-      <Whatsapp/>
+      <Whatsapp />
       <ProjectDescription />
       <ParallaxBG image={'/ofplan/hayyan/parallax1.jpeg'} />
       <HorizontalScrollGallery/>
       <ParallaxBG
-        image="/parallax2.jpg"
+        image="/hayyan/parallax2.jpg"
         text="LARGEST SWIMMABLE BLUE WATER LAGOON IN SHARJAH"
       />
       <KeyFeatures/>

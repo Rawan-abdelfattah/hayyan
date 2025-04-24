@@ -32,13 +32,16 @@ const ContactUs = () => {
   };
 
   const handleSubmit = () => {
-    fetch("https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      "https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    )
       .then((response) => {
         if (!response.ok) throw new Error("Failed to save data");
         return response.json();
@@ -102,8 +105,24 @@ const ContactUs = () => {
                 className="!h-[40px] !bg-gray-50 !rounded !border !border-gray-300 focus:!border-[#16A2B8] focus:!ring-[#16A2B8]"
               />
             </Form.Item>
-
-            <Form.Item label="Phone" required>
+            <Form.Item
+              label="Phone"
+              name="phone"
+              rules={[
+                {
+                  required: true,
+                  validator: (_, value) => {
+                    const digitsOnly = value?.replace(/\D/g, "") || "";
+                    if (!value || digitsOnly.length < 8) {
+                      return Promise.reject(
+                        new Error("Please enter a valid phone number")
+                      );
+                    }
+                    return Promise.resolve();
+                  },
+                },
+              ]}
+            >
               <PhoneInput
                 country={defaultCountry}
                 value={formData.phone}
@@ -128,14 +147,23 @@ const ContactUs = () => {
                 dropdownStyle={{ borderRadius: "8px" }}
               />
             </Form.Item>
-
-            <Form.Item label="Expected Budget" name="budget">
+            <Form.Item
+              label="Expected Budget"
+              name="budget"
+              rules={[{ required: true, message: "Please enter your budget" }]}
+            >
               <Input
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                placeholder="Example: 500,000 AED"
+                placeholder="Example: 500000"
                 className="!h-[40px] !bg-gray-50 !rounded !border !border-gray-300 focus:!border-[#16A2B8] focus:!ring-[#16A2B8]"
+                type="number"
+                step="any"
+                min="0"
+                rules={[
+                  { required: true, message: "Please enter your budget" },
+                ]}
               />
             </Form.Item>
 

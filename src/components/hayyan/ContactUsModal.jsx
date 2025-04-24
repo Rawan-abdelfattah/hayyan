@@ -67,13 +67,30 @@ const ContactUsModal = ({ isOpen, onClose }) => {
           <Input placeholder="Enter your email" />
         </Form.Item>
 
-        <Form.Item label="Phone" name="phone" rules={[{ required: true }]}>
+        <Form.Item
+          label="Phone"
+          name="phone"
+          rules={[
+            {
+              required: true,
+              validator: (_, value) => {
+                const digitsOnly = value?.replace(/\D/g, "") || "";
+                if (!value || digitsOnly.length < 8) {
+                  return Promise.reject(
+                    new Error("Please enter a valid phone number")
+                  );
+                }
+                return Promise.resolve();
+              },
+            },
+          ]}
+        >
           <PhoneInput
             country={defaultCountry}
             containerStyle={{ width: "100%" }}
             inputStyle={{
               width: "100%",
-              height: "35px",
+              height: "40px",
               borderRadius: "8px",
               border: "1px solid #E5E5E5",
               paddingLeft: "55px",
@@ -91,8 +108,20 @@ const ContactUsModal = ({ isOpen, onClose }) => {
           />
         </Form.Item>
 
-        <Form.Item label="Expected Budget" name="budget">
-          <Input placeholder="Example: 500,000 AED" />
+        <Form.Item
+          label="Expected Budget"
+          name="budget"
+          rules={[{ required: true, message: "Please enter your budget" }]}
+        >
+          <Input
+            name="budget"
+            placeholder="Example: 500000"
+            className="!h-[40px] !bg-gray-50 !rounded !border !border-gray-300 focus:!border-[#16A2B8] focus:!ring-[#16A2B8]"
+            type="number"
+            step="any"
+            min="0"
+            rules={[{ required: true, message: "Please enter your budget" }]}
+          />
         </Form.Item>
 
         <Form.Item label="Message" name="message">
