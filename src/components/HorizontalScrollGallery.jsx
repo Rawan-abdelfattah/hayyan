@@ -2,6 +2,8 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
+import { useState } from "react";
+import ContactUsModal from "./ContactUsModal";
 
 const exteriorImages = ["/exterior1.jpg", "/exterior2.jpg"];
 
@@ -13,8 +15,14 @@ const interiorImages = [
 ];
 
 const HorizontalScrollGallery = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="bg-gray-100">
+      <ContactUsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-24">
         {/* Exterior Section */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -43,7 +51,10 @@ const HorizontalScrollGallery = () => {
               The exteriors provide residents with a modern lifestyle and
               exceptional quality of living which is connected to nature.
             </p>
-            <button className="md:mx-auto lg:mx-0 flex gap-1 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="cursor-pointer md:mx-auto lg:mx-0 flex gap-1 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+            >
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>
@@ -59,7 +70,10 @@ const HorizontalScrollGallery = () => {
               The interiors feature a refined and comfortable atmosphere using
               premium materials and natural lighting.
             </p>
-            <button className="md:mx-auto lg:mx-0 flex gap-1 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="cursor-pointer md:mx-auto lg:mx-0 flex gap-1 items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+            >
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>
@@ -103,7 +117,10 @@ const HorizontalScrollGallery = () => {
             </div>
           </div>
           <div className="mt-10">
-            <button className="flex gap-1 m-auto items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="cursor-pointer flex gap-1 m-auto items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+            >
               <FaRegArrowAltCircleRight />
               REQUEST AVAILABLE UNITS AND PRICES
             </button>

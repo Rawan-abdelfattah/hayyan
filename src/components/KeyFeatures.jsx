@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaDownload } from "react-icons/fa";
+import ContactUsModal from "./ContactUsModal";
 
 const keyFeatures = [
   { icon: "🏋️‍♂️", label: "Gym" },
@@ -12,8 +13,14 @@ const keyFeatures = [
 ];
 
 const KeyFeatures = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="bg-gray-100">
+      <ContactUsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-24">
         <div className="flex flex-col lg:flex-row  p-6 gap-6">
           <div className="w-full lg:w-1/2 p-2">
@@ -27,7 +34,10 @@ const KeyFeatures = () => {
                 </li>
               ))}
             </ul>
-            <button className="flex items-center gap-1 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] md:px-5 py-2 px-4 md:text-[16px] text-[14px]  rounded-full shadow-lg transition-all duration-200 mt-10">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="cursor-pointer flex items-center gap-1 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] md:px-5 py-2 px-4 md:text-[16px] text-[14px]  rounded-full shadow-lg transition-all duration-200 mt-10"
+            >
               <FaDownload />
               DOWNLOAD BROCHURE
             </button>

@@ -1,10 +1,16 @@
-import { Home } from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Hayyan } from "./pages/Hayyan";
+import ThankYouHayyan from "./pages/ThankYouHayyan";
+
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Hayyan />} />
+        <Route path="/thank-you-hayyan" element={<ThankYouHayyan />} />
+      </Routes>
+    </Router>
   );
 }
 

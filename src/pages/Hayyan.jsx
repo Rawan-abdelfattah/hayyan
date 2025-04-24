@@ -9,7 +9,7 @@ import { Footer } from "../components/Footer";
 import KeyFeatures from "../components/KeyFeatures";
 import Gallery from "../components/Gallery";
 import { Whatsapp } from "../components/Whatsapp";
-export const Home = () => {
+export const Hayyan = () => {
   return (
     <>
       <Hero />

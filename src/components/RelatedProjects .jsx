@@ -1,31 +1,36 @@
+import { useState } from "react";
+import ContactUsModal from "./ContactUsModal";
+
 const RelatedProjects = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const relatedProjects = [
     {
       title: "Al Zahia Villas",
       description:
         "Al Zahia brings a contemporary community lifestyle and traditional values together throughout every aspect of its development",
       image: "/project1.jpeg",
-      link: "#",
     },
     {
       title: "Sustainable City Sharjah",
       description:
         "Sharjah Sustainable City is the first sustainable master-planned community in the Emirate of Sharjah.",
       image: "/project2.jpg",
-      link: "#",
     },
     {
       title: "Masaar Villas",
       description:
         "Masaar by Arada, offers a selection of 2 to 4-bedroom townhouses and 4 & 5-bedroom park villas in Sharjah, UAE",
       image: "/project3.webp",
-      link: "#",
     },
   ];
 
   return (
     <section className="bg-gray-100">
-      {" "}
+      <ContactUsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />{" "}
       <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-24 ">
         <div className="group">
           {" "}
@@ -53,12 +58,12 @@ const RelatedProjects = () => {
                 <p className="text-gray-600 text-sm mb-6">
                   {project.description}
                 </p>
-                <a
-                  href={project.link}
-                  className="inline-block bg-[#16A2B8] hover:bg-cyan-600 text-white text-sm font-semibold py-2 px-5 rounded-full shadow transition-all"
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="cursor-pointer inline-block bg-[#16A2B8] hover:bg-cyan-600 text-white text-sm font-semibold py-2 px-5 rounded-full shadow transition-all"
                 >
                   &#x27A4; CHECK AVAILABILITY
-                </a>
+                </button>
               </div>
             </div>
           ))}
