@@ -22,17 +22,15 @@ jobs:
       - name: Test SSH port 22
         run: nc -zv 64.227.99.126 22 || echo "SSH port 22 not reachable"
 
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+
       - name: Add SSH known hosts
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H 64.227.99.126 >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        uses: burnett01/rsync-deployments@v5.2
-        with:
-          switches: -avz --delete --timeout=60
-          path: ./dist/
-          remote_path: /var/www/html/ofplan/
-          remote_host: 64.227.99.126
-          remote_user: root
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+        run: rsync -avz --delete --timeout=60 ./dist/ root@64.227.99.126:/var/www/html/ofplan/
