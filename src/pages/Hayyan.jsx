@@ -9,26 +9,30 @@ import { Footer } from "../components/hayyan/Footer";
 import KeyFeatures from "../components/hayyan/KeyFeatures";
 import Gallery from "../components/hayyan/Gallery";
 import { Whatsapp } from "../components/hayyan/Whatsapp";
+import { Helmet } from "react-helmet";
 export const Hayyan = () => {
   return (
     <>
+      {" "}
+      <Helmet>
+        <title>Hayyan-sharjah – uae sales office</title>
+      </Helmet>
       <Hero />
-      <Whatsapp/>
+      <Whatsapp />
       <ProjectDescription />
-      <ParallaxBG image={'/hayyan/parallax1.jpeg'} />
-      <HorizontalScrollGallery/>
+      <ParallaxBG image={"/hayyan/parallax1.jpeg"} />
+      <HorizontalScrollGallery />
       <ParallaxBG
-        image="/parallax2.jpg"
+        image="/hayyan/parallax2.jpg"
         text="LARGEST SWIMMABLE BLUE WATER LAGOON IN SHARJAH"
       />
-      <KeyFeatures/>
-      <ParallaxBG image={'/hayyan/parallax3.jpg'} />
-      <Gallery/>
-      <ParallaxBG image={'/hayyan/parallax4.jpg'} />
-
-      <RelatedProjects/>
-      <ContactUs/>
-      <Footer/>
+      <KeyFeatures />
+      <ParallaxBG image={"/hayyan/parallax3.jpg"} />
+      <Gallery />
+      <ParallaxBG image={"/hayyan/parallax4.jpg"} />
+      <RelatedProjects />
+      <ContactUs />
+      <Footer />
     </>
   );
 };
