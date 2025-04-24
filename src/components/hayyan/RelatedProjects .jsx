@@ -9,19 +9,19 @@ const RelatedProjects = () => {
       title: "Al Zahia Villas",
       description:
         "Al Zahia brings a contemporary community lifestyle and traditional values together throughout every aspect of its development",
-      image: "/project1.jpeg",
+      image: "/hayyan/project1.jpeg",
     },
     {
       title: "Sustainable City Sharjah",
       description:
         "Sharjah Sustainable City is the first sustainable master-planned community in the Emirate of Sharjah.",
-      image: "/project2.jpg",
+      image: "/hayyan/project2.jpg",
     },
     {
       title: "Masaar Villas",
       description:
         "Masaar by Arada, offers a selection of 2 to 4-bedroom townhouses and 4 & 5-bedroom park villas in Sharjah, UAE",
-      image: "/project3.webp",
+      image: "/hayyan/project3.webp",
     },
   ];
 

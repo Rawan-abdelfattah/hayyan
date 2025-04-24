@@ -1,12 +1,12 @@
 import React from "react";
 
-const ThankYouHayyan = () => {
+const HayyanThankYou = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/parallax4.jpg')" }}
+          style={{ backgroundImage: "url('/hayyan/parallax4.jpg')" }}
         />
 
         <div className="absolute inset-0 bg-black opacity-50" />
@@ -29,4 +29,4 @@ const ThankYouHayyan = () => {
   );
 };
 
-export default ThankYouHayyan;
+export default HayyanThankYou;

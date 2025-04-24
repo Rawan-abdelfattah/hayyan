@@ -5,13 +5,13 @@ import "swiper/css";
 import { useState } from "react";
 import ContactUsModal from "./ContactUsModal";
 
-const exteriorImages = ["/exterior1.jpg", "/exterior2.jpg"];
+const exteriorImages = ["/hayyan/exterior1.jpg", "/hayyan/exterior2.jpg"];
 
 const interiorImages = [
-  "/internal1.jpg",
-  "/internal2.jpg",
-  "/internal3.jpg",
-  "/internal4.jpg",
+  "/hayyan/internal1.jpg",
+  "/hayyan/internal2.jpg",
+  "/hayyan/internal3.jpg",
+  "/hayyan/internal4.jpg",
 ];
 
 const HorizontalScrollGallery = () => {

@@ -1,30 +1,30 @@
 import React from "react";
-import Hero from "../components/Hero";
-import ProjectDescription from "../components/ProjectDescription";
-import ParallaxBG from "../components/ParallaxBG";
-import HorizontalScrollGallery from "../components/HorizontalScrollGallery";
-import RelatedProjects from "../components/RelatedProjects ";
-import ContactUs from "../components/ContactUs";
-import { Footer } from "../components/Footer";
-import KeyFeatures from "../components/KeyFeatures";
-import Gallery from "../components/Gallery";
-import { Whatsapp } from "../components/Whatsapp";
+import Hero from "../components/hayyan/Hero";
+import ProjectDescription from "../components/hayyan/ProjectDescription";
+import ParallaxBG from "../components/hayyan/ParallaxBG";
+import HorizontalScrollGallery from "../components/hayyan/HorizontalScrollGallery";
+import RelatedProjects from "../components/hayyan/RelatedProjects ";
+import ContactUs from "../components/hayyan/ContactUs";
+import { Footer } from "../components/hayyan/Footer";
+import KeyFeatures from "../components/hayyan/KeyFeatures";
+import Gallery from "../components/hayyan/Gallery";
+import { Whatsapp } from "../components/hayyan/Whatsapp";
 export const Hayyan = () => {
   return (
     <>
       <Hero />
       <Whatsapp/>
       <ProjectDescription />
-      <ParallaxBG image={'/parallax1.jpeg'} />
+      <ParallaxBG image={'/hayyan/parallax1.jpeg'} />
       <HorizontalScrollGallery/>
       <ParallaxBG
         image="/parallax2.jpg"
         text="LARGEST SWIMMABLE BLUE WATER LAGOON IN SHARJAH"
       />
       <KeyFeatures/>
-      <ParallaxBG image={'/parallax3.jpg'} />
+      <ParallaxBG image={'/hayyan/parallax3.jpg'} />
       <Gallery/>
-      <ParallaxBG image={'/parallax4.jpg'} />
+      <ParallaxBG image={'/hayyan/parallax4.jpg'} />
 
       <RelatedProjects/>
       <ContactUs/>

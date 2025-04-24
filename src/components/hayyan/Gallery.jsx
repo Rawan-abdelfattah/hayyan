@@ -3,22 +3,22 @@ import React from "react";
 const galleryData = [
   {
     id: 1,
-    src: "/gallery1.jpg",
+    src: "/hayyan/gallery1.jpg",
     alt: "Modern villa front view",
   },
   {
     id: 2,
-    src: "/gallery2.jpg",
+    src: "/hayyan/gallery2.jpg",
     alt: "Backyard and pool area",
   },
   {
     id: 3,
-    src: "/parallax4.jpg",
+    src: "/hayyan/parallax4.jpg",
     alt: "Row of modern townhouses",
   },
   {
     id: 4,
-    src: "/gallery4.jpg",
+    src: "/hayyan/gallery4.jpg",
     alt: "Aerial view of residential community",
   },
 ];

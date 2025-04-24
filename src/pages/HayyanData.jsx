@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export const SheetsData = () => {
+export const HayyanData = () => {
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [data, setData] = useState([]);
