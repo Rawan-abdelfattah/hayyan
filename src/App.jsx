@@ -14,7 +14,7 @@ function App() {
         <Route path="/hayyan" element={<Hayyan />} />
         <Route path="/ajwan" element={<Ajwan />} />
         <Route path="/al-zahia" element={<AlZahia />} />
-        <Route path="/al-mamsha" element={<AlMamsha  />} />
+        <Route path="/al-mamsha" element={<AlMamsha  />} /> 
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/data" element={<Data />} />
         <Route path="*" element={<NotFound />} /> {/* 404 route */}
