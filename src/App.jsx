@@ -5,7 +5,7 @@ import { AlZahia } from "./pages/AlZahia";
 import ThankYou from "./pages/ThankYou";
 import { Data } from "./pages/Data";
 import { NotFound } from "./pages/NotFound";
-import { AlMamsha } from "./pages/alMamsha";
+import { AlMamsha } from "./pages/AlMamsha";
 
 function App() {
   return (
