@@ -47,7 +47,7 @@ const Hero = () => {
           </h2>
 
           <div className="bg-black/60 rounded mx-auto w-full max-w-[800px]">
-            <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold px-6 py-3 text-center">
+            <h1 className="text-2xl md:text-4xl font-bold px-6 py-3 text-center">
               Own Your Luxury Villa
             </h1>
           </div>

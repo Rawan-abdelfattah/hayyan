@@ -4,31 +4,17 @@ import ContactUsModal from "./ContactUsModal";
 
 const galleryData = [
   {
-    title: "Woroud Apartments",
+    title: "Residential",
     description:
-      "Woroud is the first residential apartment building in Uptown Al Zahia offering a perfect balance of living options and meticulously designed amenities.",
-    image: "/ofplan/alZahia_imgs/z1.jpg",
+      "Al Mamsha is the first destination in Sharjah that contains ample sidewalks and walkways, enabling you to access the entire community conveniently on foot or by bicycle. It offers a dynamic and strategic lifestyle through meticulously planned buildings and modern designs with high-quality finishes that cater to the needs of young families and children.",
+    image: "/ofplan/alMamsha_imgs/a1.jpg",
     reverse: false,
   },
   {
-    title: "Woroud 1",
+    title: "Retail",
     description:
-      "These homes will define the character of this neighbourhood, with a refreshing and contemporary design that is also sustainable and efficient in its use of natural light. With options of both studios and 1 bedroom apartments, it is ideal for young families and investors. Some of the homes also accommodate study rooms, an ideal space to concentrate or work from home.",
-    image: "/ofplan/alZahia_imgs/z3.jpg",
-    reverse: true,
-  },
-  {
-    title: "Woroud 2",
-    description:
-      "Woroud 2 homes define the character of this neighborhood, with refreshing contemporary designs that are also sustainable and efficient in their use of natural light. With options of studios, 1, 2 and 3 bedroom apartments, these homes are ideal for investors and families alike.",
-    image: "/ofplan/alZahia_imgs/z2.jpg",
-    reverse: false,
-  },
-  {
-    title: "Woroud 3",
-    description:
-      "Woroud 3 is comprised of studios and 1, 2 and 3 bedroom apartments. This is an ideal opportunity for investors and families to enjoy a family-friendly environment and a premier living experience.",
-    image: "/ofplan/alZahia_imgs/z4.jpg",
+      "Al Mamsha offers a sprawling retail facility that is spread across the ground level, providing a wide array of retail options, a first for Sharjah. The retail brands offer a unique shopping experience suitable for all shopping enthusiasts.",
+    image: "/ofplan/alMamsha_imgs/a2.jpg",
     reverse: true,
   },
 ];

@@ -3,8 +3,9 @@ import { FaDownload } from "react-icons/fa";
 import ContactUsModal from "./ContactUsModal";
 
 const imageUrls = [
-  "/ofplan/alZahia_imgs/hero2.jpg",
-  "/ofplan/alZahia_imgs/hero1.jpg",
+  "/ofplan/alMamsha_imgs/hero1.jpg",
+  "/ofplan/alMamsha_imgs/hero2.jpg",
+  "/ofplan/alMamsha_imgs/hero3.jpg",
 ];
 
 const Hero = () => {
@@ -37,7 +38,7 @@ const Hero = () => {
 
       <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 lg:left-20 lg:translate-x-0">
         <img
-          src="/ofplan/alZahia_imgs/logo.png"
+          src="/ofplan/alMamsha_imgs/logo.png"
           alt="Logo"
           className="w-32 sm:w-40 object-contain"
         />
@@ -45,26 +46,29 @@ const Hero = () => {
 
       <div className="m-auto relative z-10 flex items-center justify-center h-full px-4 text-center">
         <div className="max-w-2xl w-full">
-          <h2 className="text-lg  sm:text-xl md:text-3xl mb-10 font-[700]">
-            Experience vibrant urban living
+          <h2 className="text-lg  sm:text-xl md:text-2xl mb-3 font-[400]">
+            Studio , 1BR & 2BR Apartments
           </h2>
 
-          <h2
-            style={{ textShadow: "3px 3px 1px #000000" }}
-            className="text-4xl md:text-6xl mb-10 font-[700]"
-          >
-            Uptown Al Zahia
-          </h2>
-
-          <div className="flex flex-col gap-2 mb-10">
-            <p className="text-lg md:text-xl font-[700] mt-6 ">
-              Flexible payment Plan
-            </p>
-            <p className="text-lg md:text-xl font-[700]  ">
-              Freehold Ownership For All Nationals
-            </p>
+          <div className="bg-black/60 rounded mx-auto w-full max-w-[800px]">
+            <h1 className=" text-[17px] md:text-4xl font-bold px-6 py-3 text-center">
+              A New Living Experience By Alef Group
+            </h1>
           </div>
 
+          <p className="text-lg md:text-xl font-[400] mt-6 mb-2">
+            Starting Price : AED 410,000
+          </p>
+          <div className="mt-10">
+            {" "}
+            <p className="mb-1 font-bold">
+              Free Hold Ownership for all nationals
+            </p>
+            <p className="mb-1 font-bold">
+              Interest Free Flexible Payment Plan
+            </p>
+            <p className="mb-6">Only 10 Minutes away from Dubai</p>
+          </div>
           <button
             onClick={() => setIsModalOpen(true)}
             className="flex items-center gap-1 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] px-6 py-2 rounded-full shadow-lg transition-all duration-200 mx-auto"

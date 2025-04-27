@@ -15,13 +15,13 @@ const RelatedProjects = () => {
       title: "Sustainable City Sharjah",
       description:
         "Sharjah Sustainable City is the first sustainable master-planned community in the Emirate of Sharjah.",
-      image: "/ofplan/ajwan_imgs/project2.jpg",
+      image: "/ofplan/project2.jpg",
     },
     {
       title: "Masaar Villas",
       description:
         "Masaar by Arada, offers a selection of 2 to 4-bedroom townhouses and 4 & 5-bedroom park villas in Sharjah, UAE",
-      image: "/ofplan/ajwan_imgs/project3.webp",
+      image: "/ofplan/project3.webp",
     },
   ];
 

@@ -5,7 +5,7 @@ import "swiper/css";
 import { useState } from "react";
 import ContactUsModal from "./ContactUsModal";
 
-const exteriorImages = ["/ofplan/hayyan_imgs/exterior1.jpg", "/ofplan/hayyan_imgs/exterior2.jpg"];
+const exteriorImages = ["/ofplan/hayyan_imgs/exterior1.jpg", "/ofplan/hayyan_imgs/hero1.jpg"];
 
 const interiorImages = [
   "/ofplan/hayyan_imgs/internal1.jpg",

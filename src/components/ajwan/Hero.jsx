@@ -60,7 +60,7 @@ const Hero = () => {
         <div className="max-w-2xl w-full">
           <h2
             style={{ textShadow: "3px 3px 1px #000000" }}
-            className="text-lg sm:text-xl md:text-4xl mb-3 font-[400]"
+            className="text-[20px] md:text-4xl mb-3 font-[400]"
           >
             AJWAN – KHORFAKKAN RESIDENCES
           </h2>
