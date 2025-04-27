@@ -8,8 +8,11 @@ const ContactUsModal = ({ isOpen, onClose }) => {
   const [form] = Form.useForm();
   const [defaultCountry, setDefaultCountry] = useState("us");
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (values) => {
+    setIsSubmitting(true); // Start submitting
+
     fetch(
       "https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f",
       {
@@ -31,7 +34,10 @@ const ContactUsModal = ({ isOpen, onClose }) => {
           setDefaultCountry(data.country.toLowerCase());
         }
       })
-      .catch((err) => console.error("Geolocation error:", err));
+      .catch((error) => {
+        console.error("Error saving data:", error);
+        setIsSubmitting(false); // Reset on error
+      });
   }, []);
 
   return (
@@ -133,9 +139,10 @@ const ContactUsModal = ({ isOpen, onClose }) => {
             type="primary"
             htmlType="submit"
             className="!bg-[#16A2B8] hover:!bg-cyan-600 text-white font-semibold px-6 py-2 rounded-full shadow-md transition duration-300"
-            size="large"
+            loading={isSubmitting} // 👈 this disables button + shows spinner
+            disabled={isSubmitting} // 👈 also disable the button
           >
-            SUBMIT
+            {isSubmitting ? "Submitting..." : "SUBMIT"}
           </Button>
         </Form.Item>
       </Form>

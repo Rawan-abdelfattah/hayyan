@@ -7,9 +7,12 @@ import { useNavigate } from "react-router-dom";
 const ContactUsModal = ({ isOpen, onClose }) => {
   const [form] = Form.useForm();
   const [defaultCountry, setDefaultCountry] = useState("us");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (values) => {
+    setIsSubmitting(true); // Start submitting
+
     fetch(
       "https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f",
       {
@@ -20,8 +23,10 @@ const ContactUsModal = ({ isOpen, onClose }) => {
     )
       .then((res) => res.json())
       .then(() => navigate("/thank-you"))
-      .catch((err) => console.error("Error saving data:", err));
-  };
+      .catch((error) => {
+        console.error("Error saving data:", error);
+        setIsSubmitting(false); // Reset on error
+      });  };
 
   useEffect(() => {
     fetch("https://ipinfo.io/json?token=1ed173baff89f5")
@@ -129,14 +134,15 @@ const ContactUsModal = ({ isOpen, onClose }) => {
         </Form.Item>
 
         <Form.Item className="text-center">
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="!bg-[#16A2B8] hover:!bg-cyan-600 text-white font-semibold px-6 py-2 rounded-full shadow-md transition duration-300"
-            size="large"
-          >
-            SUBMIT
-          </Button>
+     <Button
+                type="primary"
+                htmlType="submit"
+                className="!bg-[#16A2B8] hover:!bg-cyan-600 text-white font-semibold px-6 py-2 rounded-full shadow-md transition duration-300"
+                loading={isSubmitting} // 👈 this disables button + shows spinner
+                disabled={isSubmitting} // 👈 also disable the button
+              >
+                {isSubmitting ? "Submitting..." : "SUBMIT"}
+              </Button>
         </Form.Item>
       </Form>
     </Modal>
