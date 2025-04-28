@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Tabs, Spin, Input, Button } from "antd";
+import { Link } from "react-router-dom"; // <--- Make sure you're using react-router-dom!
 
 const { TabPane } = Tabs;
 
 const API_ENDPOINTS = {
   hayyan: "https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f",
   ajwan: "https://api.sheetbest.com/sheets/424b0673-f5a8-440a-a009-6b7421cda7a3",
-  alzahia: "https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f",
-  almamsha: "https://api.sheetbest.com/sheets/ef221e6f-a3b4-4623-b9d0-efdfc443202f",
+  alzahia: "https://api.sheetbest.com/sheets/e8155249-7666-4def-8c7d-27e398755808",
+  almamsha: "https://api.sheetbest.com/sheets/c7e47906-eaf0-42a9-8aa9-6c03f4cd5491",
+  bayn: "https://api.sheetbest.com/sheets/f8ff1374-2591-4d7d-bf16-2d618c5015b8",
 };
 
 export const Data = () => {
@@ -19,6 +21,7 @@ export const Data = () => {
     ajwan: [],
     alzahia: [],
     almamsha: [],
+    bayn: [],
   });
 
   const handlePasswordSubmit = () => {
@@ -54,7 +57,6 @@ export const Data = () => {
         });
     }
   }, [isAuthenticated]);
-console.log(data);
 
   return (
     <div className="w-full px-4 py-12">
@@ -94,11 +96,24 @@ console.log(data);
                 tab={project.charAt(0).toUpperCase() + project.slice(1)}
                 key={project}
               >
+                {/* Link above the table */}
+                <div className="text-center mb-6">
+                  <Link
+                    to={`/${project}`}
+                    target="_blank"
+
+                    className="text-[#16A2B8] font-semibold underline hover:text-[#0d7c91] transition"
+                  >
+                    Visit {project.charAt(0).toUpperCase() + project.slice(1)} Page
+                  </Link>
+                </div>
+
                 <div className="overflow-x-auto bg-white shadow-xl rounded-xl p-4">
                   <table className="w-full table-auto divide-y divide-gray-200">
                     <thead className="bg-gray-100">
                       <tr>
-                        {data[project] && data[project][0] &&
+                        {data[project] &&
+                          data[project][0] &&
                           Object.keys(data[project][0]).map((key) => (
                             <th
                               key={key}
@@ -110,21 +125,22 @@ console.log(data);
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
-                      {data[project] && data[project].map((row, idx) => (
-                        <tr
-                          key={idx}
-                          className="hover:bg-gray-50 transition duration-150"
-                        >
-                          {Object.values(row).map((value, i) => (
-                            <td
-                              key={i}
-                              className="px-4 py-3 text-sm text-center text-gray-700 whitespace-nowrap"
-                            >
-                              {value ? value : "__"}
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
+                      {data[project] &&
+                        data[project].map((row, idx) => (
+                          <tr
+                            key={idx}
+                            className="hover:bg-gray-50 transition duration-150"
+                          >
+                            {Object.values(row).map((value, i) => (
+                              <td
+                                key={i}
+                                className="px-4 py-3 text-sm text-center text-gray-700 whitespace-nowrap"
+                              >
+                                {value ? value : "__"}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
                     </tbody>
                   </table>
                 </div>
