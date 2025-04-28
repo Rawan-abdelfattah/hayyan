@@ -10,7 +10,7 @@ const ContactUs = () => {
     email: "",
     phone: "",
     message: "",
-    budget: "",
+    budget: "", 
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 

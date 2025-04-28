@@ -5,7 +5,7 @@ const Map = () => {
     <section className="bg-gray-100">
       <img
         src="/ofplan/ajwan_imgs/map.png"
-        className=" py-20 bg-center bg-cover md:h-[90vh] w-full h-[400px]"
+        className=" py-20 bg-center bg-cover md:h-[95vh] w-full h-[500px]"
         alt="Map"
       />
     </section>

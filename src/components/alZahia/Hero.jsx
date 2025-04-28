@@ -65,13 +65,12 @@ const Hero = () => {
             </p>
           </div>
 
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-1 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] px-6 py-2 rounded-full shadow-lg transition-all duration-200 mx-auto"
-          >
-            <FaDownload />
-            DOWNLOAD BROCHURE
-          </button>
+       <a href="/ofplan/alZahia_imgs/Al-Zahia.pdf" download>
+                 <button className="cursor-pointer m-auto flex items-center gap-1 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] md:px-5 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition-all duration-200 mt-10">
+                   <FaDownload />
+                   DOWNLOAD BROCHURE
+                 </button>
+               </a>
 
           <ContactUsModal
             isOpen={isModalOpen}

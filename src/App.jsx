@@ -6,6 +6,7 @@ import ThankYou from "./pages/ThankYou";
 import { Data } from "./pages/Data";
 import { NotFound } from "./pages/NotFound";
 import { AlMamsha } from "./pages/AlMamsha";
+import { Bayn } from "./pages/Bayn";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/ajwan" element={<Ajwan />} />
         <Route path="/al-zahia" element={<AlZahia />} />
         <Route path="/al-mamsha" element={<AlMamsha  />} /> 
+        <Route path="/bayn" element={<Bayn  />} /> 
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/data" element={<Data />} />
         <Route path="*" element={<NotFound />} /> {/* 404 route */}

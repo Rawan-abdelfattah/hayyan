@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaRegArrowAltCircleRight } from "react-icons/fa";
 import ContactUsModal from "./ContactUsModal";
 const keyFeatures = [
   { icon: "🏋️‍♂️", label: "Gym" },
   { icon: "👨‍👩‍👧", label: "Kids Playing Area" },
   { icon: "🏬", label: "Retail Shops" },
   { icon: "🏊‍♂️", label: "Swimming Pool" },
-  { icon: "🛍️", label: "Shopping Mall" }, 
-  { icon: "🏖️", label: "Beach Area" },  // Added Beach Area
-  { icon: "🚤", label: "Marina" }        // Added Marina
+  { icon: "🛍️", label: "Shopping Mall" },
+  { icon: "🏖️", label: "Beach Area" }, // Added Beach Area
+  { icon: "🚤", label: "Marina" }, // Added Marina
 ];
-
 
 const KeyFeatures = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,10 +35,10 @@ const KeyFeatures = () => {
             </ul>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="cursor-pointer flex items-center gap-1 py-2 bg-[#16A2B8] hover:bg-cyan-600 text-white font-[400] md:px-5 py-2 px-4 md:text-[16px] text-[14px]  rounded-full shadow-lg transition-all duration-200 mt-10"
+              className="cursor-pointer  mt-10 flex gap-1   items-center bg-[#16A2B8] hover:bg-cyan-600 text-white font-semibold md:px-5 py-2 px-4 md:text-[16px] text-[14px] rounded-full shadow-lg transition duration-300 transform hover:scale-105"
             >
-              <FaDownload />
-              DOWNLOAD BROCHURE
+              <FaRegArrowAltCircleRight />
+              REQUEST AVAILABLE UNITS
             </button>
           </div>
 
