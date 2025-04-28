@@ -98,14 +98,14 @@ export const Data = () => {
               >
                 {/* Link above the table */}
                 <div className="text-center mb-6">
-                  <Link
-                    to={`/${project}`}
-                    target="_blank"
+                <Link
+  to={`/${project === "almamsha" ? "al-mamsha" : project === "alzahia" ? "al-zahia" : project}`}
+  target="_blank"
+  className="text-[#16A2B8] font-semibold underline hover:text-[#0d7c91] transition"
+>
+  Visit {project.charAt(0).toUpperCase() + project.slice(1)} Page
+</Link>
 
-                    className="text-[#16A2B8] font-semibold underline hover:text-[#0d7c91] transition"
-                  >
-                    Visit {project.charAt(0).toUpperCase() + project.slice(1)} Page
-                  </Link>
                 </div>
 
                 <div className="overflow-x-auto bg-white shadow-xl rounded-xl p-4">
